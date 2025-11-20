@@ -1,4 +1,5 @@
 <template>
+  <UnderConstruction />
   <div class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
     <!-- 顶部导航 -->
     <header class="sticky top-0 z-20 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur transition-colors duration-300">
@@ -196,9 +197,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 import UniversityCommunity from './components/UniversityCommunity.vue';
 import SeasonalEffects from './components/SeasonalEffects.vue';
-import { ref, onMounted, computed } from 'vue';
+import UnderConstruction from './components/UnderConstruction.vue';
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id)
