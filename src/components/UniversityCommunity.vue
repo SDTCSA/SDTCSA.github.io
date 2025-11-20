@@ -17,45 +17,45 @@ interface University {
 const universities: University[] = [
   {
     id: 1,
-    name: '山东大学',
+    name: '山东大学（测试用）',
     logo: 'https://via.placeholder.com/150/0000FF/FFFFFF?text=SDU',
-    contact: { qqGroup: '123456789', description: '山东大学东方爱好者协会' }
+    contact: { qqGroup: '123456789（测试用）', description: '山东大学东方爱好者协会' }
   },
   {
     id: 2,
-    name: '山东大学（威海）',
+    name: '山东大学（威海）（唯一真神）',
     logo: 'src/logos/sduwh.png',
-    contact: { qqGroup: '908978336', description: '山东大学（威海）东方同好会' }
+    contact: { qqGroup: '908978336（测试用）', description: '山东大学（威海）东方同好会' }
   },
   {
     id: 3,
-    name: '山东科技大学',
+    name: '山东科技大学（测试用）',
     logo: 'https://via.placeholder.com/150/FF0000/FFFFFF?text=SDUST',
-    contact: { qqGroup: '111222333', description: '山科大东方幻想乡' }
+    contact: { qqGroup: '111222333（测试用）', description: '山科大幻想乡' }
   },
   {
     id: 4,
-    name: '青岛大学',
+    name: '青岛大学（测试用）',
     logo: 'https://via.placeholder.com/150/FFFF00/000000?text=QDU',
-    contact: { qqGroup: '444555666' }
+    contact: { qqGroup: '444555666（测试用）' }
   },
   {
     id: 5,
-    name: '济南大学',
+    name: '济南大学（测试用）',
     logo: 'https://via.placeholder.com/150/008000/FFFFFF?text=UJN',
-    contact: { qqGroup: '777888999' }
+    contact: { qqGroup: '777888999（测试用）' }
   },
   {
     id: 6,
-    name: '齐鲁工业大学',
+    name: '齐鲁工业大学（测试用）',
     logo: 'https://via.placeholder.com/150/800080/FFFFFF?text=QLU',
-    contact: { qqGroup: '123123123' }
+    contact: { qqGroup: '123123123（测试用）' }
   },
   {
     id: 7,
-    name: '山东师范大学',
+    name: '山东师范大学（测试用）',
     logo: 'https://via.placeholder.com/150/FFA500/000000?text=SDNU',
-    contact: { qqGroup: '321321321' }
+    contact: { qqGroup: '321321321（测试用）' }
   },
   {
     id: 8,
