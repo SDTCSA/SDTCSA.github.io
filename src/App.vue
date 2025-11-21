@@ -3,12 +3,12 @@
   <div v-else class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
     <!-- 顶部导航 -->
     <header class="sticky top-0 z-20 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur transition-colors duration-300">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-        <div class="flex items-center gap-2">
-          <div class="h-8 w-8 rounded bg-sky-600 dark:bg-sky-500 shadow-lg shadow-sky-500/20 dark:shadow-sky-500/40" />
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+        <div class="flex items-center gap-3">
+          <img src="/logos/sdtcsa.png" alt="SDTCSA Logo" class="h-16 w-16 object-contain drop-shadow-md" />
           <div>
-            <p class="text-sm font-semibold tracking-wide text-slate-900 dark:text-slate-100">山东东方高校联合会</p>
-            <p class="text-xs text-slate-500 dark:text-slate-400">Shandong Touhou College Students Union</p>
+            <p class="text-base font-bold tracking-wide text-slate-900 dark:text-slate-100">山东东方高校联合会</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Shandong Touhou College Students Association</p>
           </div>
         </div>
 
@@ -49,15 +49,20 @@
       >
         <!-- Dynamic Background -->
         <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden rounded-3xl">
-            <!-- Primary Glow -->
+            <!-- Red Glow -->
             <div 
-                class="absolute w-[500px] h-[500px] rounded-full bg-sky-400/20 dark:bg-sky-500/20 blur-[80px] transition-transform duration-100 ease-out will-change-transform"
+                class="absolute w-[500px] h-[500px] rounded-full bg-red-500/20 dark:bg-red-500/20 blur-[80px] transition-transform duration-100 ease-out will-change-transform"
                 :style="{ transform: `translate(${mouseX - 250}px, ${mouseY - 250}px)` }"
             ></div>
-             <!-- Secondary Glow (Delayed/Offset) -->
+             <!-- Yellow Glow -->
              <div 
-                class="absolute w-[300px] h-[300px] rounded-full bg-fuchsia-400/20 dark:bg-fuchsia-500/20 blur-[60px] transition-transform duration-300 ease-out will-change-transform"
-                :style="{ transform: `translate(${mouseX * 0.8 - 150}px, ${mouseY * 0.8 - 150}px)` }"
+                class="absolute w-[400px] h-[400px] rounded-full bg-amber-400/20 dark:bg-amber-400/20 blur-[70px] transition-transform duration-200 ease-out will-change-transform"
+                :style="{ transform: `translate(${mouseX * 0.9 - 200}px, ${mouseY * 0.9 - 200}px)` }"
+            ></div>
+             <!-- White Glow -->
+             <div 
+                class="absolute w-[300px] h-[300px] rounded-full bg-slate-300/30 dark:bg-white/10 blur-[60px] transition-transform duration-300 ease-out will-change-transform"
+                :style="{ transform: `translate(${mouseX * 0.7 + 50}px, ${mouseY * 0.7 + 50}px)` }"
             ></div>
         </div>
 
@@ -107,29 +112,45 @@
           </div>
         </div>
 
-        <!-- 右侧卡片：技术栈简介 -->
-        <aside class="relative z-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm p-4 shadow-xl shadow-slate-200/50 dark:shadow-sky-900/40 transition-colors duration-300">
-          <h2 class="text-sm font-semibold text-slate-900 dark:text-slate-100">近期活动预告</h2>
-          <p class="mt-1 text-[11px] text-slate-500 dark:text-slate-400">精彩活动不容错过，欢迎大家积极参与。</p>
-          <dl class="mt-4 space-y-3 text-xs">
-            <div class="flex justify-between">
-              <dt class="text-slate-700 dark:text-slate-300">例会交流</dt>
-              <dd class="text-slate-500 dark:text-slate-400">定期举办线下/线上例会</dd>
-            </div>
-            <div class="flex justify-between">
-              <dt class="text-slate-700 dark:text-slate-300">同人展参展</dt>
-              <dd class="text-slate-500 dark:text-slate-400">组织参加各地同人展会</dd>
-            </div>
-            <div class="flex justify-between">
-              <dt class="text-slate-700 dark:text-slate-300">线上联机</dt>
-              <dd class="text-slate-500 dark:text-slate-400">非想天则/STG/其他游戏</dd>
-            </div>
-            <div class="flex justify-between">
-              <dt class="text-slate-700 dark:text-slate-300">合刊制作</dt>
-              <dd class="text-slate-500 dark:text-slate-400">联合制作社团刊物与周边</dd>
-            </div>
-          </dl>
-        </aside>
+        <!-- 右侧卡片 -->
+        <div class="relative z-10 flex flex-col gap-6">
+          <!-- 3D Logo -->
+          <div 
+            class="relative mx-auto w-64 h-64 md:w-80 md:h-80 transition-transform duration-100 ease-out will-change-transform"
+            :style="{ 
+              transform: `perspective(1000px) rotateX(${heroRotateX}deg) rotateY(${heroRotateY}deg)` 
+            }"
+          >
+            <img 
+              src="/logos/sdtcsa.png" 
+              alt="SDTCSA 3D Logo" 
+              class="w-full h-full object-contain drop-shadow-2xl"
+            />
+          </div>
+
+          <aside class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm p-4 shadow-xl shadow-slate-200/50 dark:shadow-sky-900/40 transition-colors duration-300">
+            <h2 class="text-sm font-semibold text-slate-900 dark:text-slate-100">近期活动预告</h2>
+            <p class="mt-1 text-[11px] text-slate-500 dark:text-slate-400">精彩活动不容错过，欢迎大家积极参与。</p>
+            <dl class="mt-4 space-y-3 text-xs">
+              <div class="flex justify-between">
+                <dt class="text-slate-700 dark:text-slate-300">例会交流</dt>
+                <dd class="text-slate-500 dark:text-slate-400">定期举办线下/线上例会</dd>
+              </div>
+              <div class="flex justify-between">
+                <dt class="text-slate-700 dark:text-slate-300">同人展参展</dt>
+                <dd class="text-slate-500 dark:text-slate-400">组织参加各地同人展会</dd>
+              </div>
+              <div class="flex justify-between">
+                <dt class="text-slate-700 dark:text-slate-300">线上联机</dt>
+                <dd class="text-slate-500 dark:text-slate-400">非想天则/STG/其他游戏</dd>
+              </div>
+              <div class="flex justify-between">
+                <dt class="text-slate-700 dark:text-slate-300">合刊制作</dt>
+                <dd class="text-slate-500 dark:text-slate-400">联合制作社团刊物与周边</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
       </section>
 
       <!-- 东方活动 -->
@@ -229,12 +250,25 @@ const toggleSeasonEffect = () => {
 const heroRef = ref<HTMLElement | null>(null);
 const mouseX = ref(0);
 const mouseY = ref(0);
+const heroRotateX = ref(0);
+const heroRotateY = ref(0);
 
 const handleHeroMouseMove = (e: MouseEvent) => {
   if (!heroRef.value) return;
   const rect = heroRef.value.getBoundingClientRect();
-  mouseX.value = e.clientX - rect.left;
-  mouseY.value = e.clientY - rect.top;
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  
+  mouseX.value = x;
+  mouseY.value = y;
+
+  // Calculate rotation based on center of hero section
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+  
+  // Max rotation 15 degrees
+  heroRotateY.value = ((x - centerX) / centerX) * 15; 
+  heroRotateX.value = -((y - centerY) / centerY) * 15;
 };
 
 onMounted(() => {
