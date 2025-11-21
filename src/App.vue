@@ -83,10 +83,11 @@
               查看当前活动
             </a>
             <a
-              href="#joinus"
+              href="https://qm.qq.com/q/YEk0Cahfmo"
               class="rounded border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-700 dark:text-slate-100 transition hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800/50"
             >
               加入我们
+
             </a>
           </div>
 
@@ -130,6 +131,9 @@
           </dl>
         </aside>
       </section>
+
+      <!-- 东方活动 -->
+      <TouhouEvents />
 
       <!-- 高校社群 -->
       <UniversityCommunity id="college" />
@@ -176,9 +180,8 @@
       <section id="joinus" class="space-y-4">
         <h2 class="text-xl font-semibold text-slate-900 dark:text-slate-50">加入我们</h2>
         <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-          <li>· 官方QQ群：请点击上方“高校社群”中对应学校的校徽获取群号。</li>
-          <li>· 联合会招新：每年秋季学期开学初进行，敬请关注官方动态。</li>
-          <li>· 合作联系：如有商务合作或活动联办意向，请联系我们的负责人。</li>
+          <li>· 官方QQ群:977015593</li>
+          <li>· 合作联系:如有活动联办意向，请入群详询。</li>
         </ul>
         <p class="text-xs text-slate-500 dark:text-slate-400">
           欢迎每一位热爱东方Project的同学加入我们的大家庭！
@@ -189,7 +192,7 @@
     <!-- 页脚 -->
     <footer class="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/90 transition-colors duration-300">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-4 text-[11px] text-slate-500 md:flex-row">
-        <p>© {{ new Date().getFullYear() }} SDTCSA Web Template. 保留部分设计思路，欢迎二次创作。</p>
+        <p>© {{ new Date().getFullYear() }} 山东东方高校联合会</p>
         <p class="text-slate-500">基于 Vue 3 · TypeScript · TailwindCSS · Vite 构建</p>
       </div>
     </footer>
@@ -201,6 +204,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue';
 import UniversityCommunity from './components/UniversityCommunity.vue';
 import SeasonalEffects from './components/SeasonalEffects.vue';
 import UnderConstruction from './components/UnderConstruction.vue';
+import TouhouEvents from './components/TouhouEvents.vue';
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id)

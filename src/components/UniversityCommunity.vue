@@ -23,15 +23,15 @@ const universities: University[] = [
   },
   {
     id: 2,
-    name: '山东大学（威海）（可用）',
+    name: '山东大学（威海）',
     logo: '/logos/sduwh.png',
-    contact: { qqGroup: '908978336（可用）', description: '山东大学（威海）东方同好会' }
+    contact: { qqGroup: '908978336', description: '崴车万同好会' }
   },
   {
     id: 3,
-    name: '山东科技大学（测试用）',
-    logo: 'https://via.placeholder.com/150/FF0000/FFFFFF?text=SDUST',
-    contact: { qqGroup: '111222333（测试用）', description: '山科大幻想乡' }
+    name: '山东建筑大学',
+    logo: '/logos/sdjzu.jpg',
+    contact: { qqGroup: '579042420', description: '济南山童联合协会' }
   },
   {
     id: 4,
@@ -41,27 +41,33 @@ const universities: University[] = [
   },
   {
     id: 5,
-    name: '济南大学（测试用）',
-    logo: 'https://via.placeholder.com/150/008000/FFFFFF?text=UJN',
-    contact: { qqGroup: '777888999（测试用）' }
+    name: '枣庄学院',
+    logo: '/logos/uzz.jpg',
+    contact: { qqGroup: '852282759' }
   },
   {
     id: 6,
-    name: '齐鲁工业大学（测试用）',
-    logo: 'https://via.placeholder.com/150/800080/FFFFFF?text=QLU',
-    contact: { qqGroup: '123123123（测试用）' }
+    name: '山东石油化工学院',
+    logo: '/logos/sdipct.png',
+    contact: { qqGroup: '644182264' }
   },
   {
     id: 7,
-    name: '山东师范大学（测试用）',
-    logo: 'https://via.placeholder.com/150/FFA500/000000?text=SDNU',
-    contact: { qqGroup: '321321321（测试用）' }
+    name: '东营科技职业学院',
+    logo: '/logos/dykj.jpg',
+    contact: { qqGroup: '644182264' }
   },
   {
     id: 8,
-    name: '青岛科技大学',
-    logo: 'https://via.placeholder.com/150/000080/FFFFFF?text=QUST',
-    contact: { qqGroup: '456456456' }
+    name: '聊城大学',
+    logo: '/logos/lcu.jpg',
+    contact: { qqGroup: '514756242' }
+  },
+  {
+    id: 9,
+    name: '烟台大学',
+    logo: '/logos/ytu.jpg',
+    contact: { qqGroup: '1007450236' }
   }
 ];
 
