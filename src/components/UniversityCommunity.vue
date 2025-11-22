@@ -20,7 +20,7 @@ const universities: University[] = [
     id: 1,
     name: '山东大学',
     logo: '/logos/sdu.png',
-    contact: { qqGroup: '186295950', description: '★山东大学♪幻想浮世伊行★' }
+    contact: { qqGroup: '186295950', description: '★山东大学♪幻想浮世伊行★蓬莱清辉学海浮幻想，灵山风起浩然行世伊★' }
   },
   {
     id: 2,
