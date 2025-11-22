@@ -132,6 +132,12 @@ const universities: University[] = [
   },
   {
     id: 20,
+    name: '青岛农业大学',
+    logo: '/logos/qau.webp',
+    contact: { qqGroup: '815491041' }
+  },
+  {
+    id: 21,
     name: '添加你的学校',
     logo: '/logos/more.webp',
     contact: { qqGroup: '977015593', description: '请加入山高联群聊私信管理员添加' }
