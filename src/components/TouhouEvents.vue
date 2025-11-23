@@ -25,13 +25,16 @@
             class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
           />
           <!-- Overlay Gradient -->
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-40"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-800 via-slate-900/60 to-transparent opacity-90 transition-opacity group-hover:opacity-80"></div>
         </div>
 
         <!-- Content -->
         <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-          <div class="mb-1 flex items-center gap-2 text-xs font-medium text-sky-300">
-            <span class="rounded-full bg-sky-500/20 px-2 py-0.5 backdrop-blur-sm border border-sky-500/30">
+          <div class="mb-1 flex items-center gap-2 text-xs font-medium text-slate-200">
+            <span 
+              class="rounded-full px-2 py-0.5 backdrop-blur-sm border"
+              :class="getStatusClass(event.status)"
+            >
               {{ event.status }}
             </span>
             <span>{{ event.date }}</span>
@@ -144,7 +147,7 @@ interface TouhouEvent {
   title: string;
   date: string;
   location: string;
-  status: '筹备中' | '报名中' | '进行中' | '已结束' | '待定';
+  status: '筹备中' | '售票中' | '进行中' | '已结束' | '待定';
   image: string;
   description: string;
   link?: string;
@@ -159,10 +162,10 @@ const events = ref<TouhouEvent[]>([
     title: '山东东方高校联合例会01-齐鲁幻聚',
     date: '2025年12月20日',
     location: '济南',
-    status: '筹备中',
-    image: '/posters/qlhj.jpg',
+    status: '售票中',
+    image: '/posters/qlhj.webp',
     description: '山东东方高校联合会12月例会。\n\n群聊：977015593',
-    link: 'https://qm.qq.com/q/977015593'
+    link: 'https://touhou.market/main/events/320'
   },
   {
     id: 2,
@@ -170,7 +173,7 @@ const events = ref<TouhouEvent[]>([
     date: '1月27-28日',
     location: '济南',
     status: '筹备中',
-    image: '/posters/byht.jpeg',
+    image: '/posters/byht.webp',
     description: '济南绊月花田岁华逐宴。\n\n群聊：981769085',
     link: 'https://qm.qq.com/q/981769085'
   },
@@ -180,7 +183,7 @@ const events = ref<TouhouEvent[]>([
     date: '2月',
     location: '泰安',
     status: '筹备中',
-    image: '/posters/tathp.jpg',
+    image: '/posters/tathp.webp',
     description: '泰安东方Project Only聚会。\n\n群聊：1057613342',
     link: 'https://qm.qq.com/q/1057613342'
   },
@@ -190,7 +193,7 @@ const events = ref<TouhouEvent[]>([
     date: '2月10-11日',
     location: '聊城东昌府',
     status: '筹备中',
-    image: '/posters/dfsly.jpg',
+    image: '/posters/dfsly.webp',
     description: '东方霜林宴in聊城东昌府。\n\n联系群：184537740',
     link: 'https://qm.qq.com/q/184537740'
   },
@@ -305,6 +308,21 @@ const openEvent = (event: TouhouEvent) => {
 const closeEvent = () => {
   selectedEvent.value = null;
   document.body.style.overflow = '';
+};
+
+const getStatusClass = (status: string) => {
+  switch (status) {
+    case '售票中':
+      return 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30';
+    case '进行中':
+      return 'bg-sky-500/20 text-sky-300 border-sky-500/30';
+    case '筹备中':
+      return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+    case '已结束':
+      return 'bg-slate-500/20 text-slate-300 border-slate-500/30';
+    default: // 待定
+      return 'bg-slate-500/20 text-slate-300 border-slate-500/30';
+  }
 };
 
 const openLink = (url: string) => {

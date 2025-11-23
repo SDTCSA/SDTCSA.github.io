@@ -5,10 +5,10 @@
     <header class="sticky top-0 z-20 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur transition-colors duration-300">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         <div class="flex items-center gap-3">
-          <img src="/logos/sdtcsa.png" alt="SDTCSA Logo" class="h-16 w-16 object-contain drop-shadow-md" />
+          <img :src="resolveImage('/logos/sdtcsa.png')" alt="SDTCSA Logo" class="h-16 w-16 object-contain drop-shadow-md" />
           <div>
             <p class="text-base font-bold tracking-wide text-slate-900 dark:text-slate-100">山东东方高校联合会</p>
-            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Shandong Touhou College Students Association</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Shandong Touhou College Union</p>
           </div>
         </div>
 
@@ -69,11 +69,11 @@
         <div class="relative z-10">
           <p class="inline-flex items-center gap-1 rounded-full border border-sky-200 dark:border-sky-500/40 bg-sky-50 dark:bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-700 dark:text-sky-300">
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
-            山高联，复活！
+            山东东方高校联合例会01-齐鲁幻聚即将举办
           </p>
           <h1 class="mt-4 text-5xl font-semibold leading-tight tracking-tight text-slate-900 dark:text-slate-50 md:text-6xl">
-            梦入 <span class="text-sky-600 dark:text-sky-400">幻想</span><br>
-            共聚 <span class="text-sky-600 dark:text-sky-400">齐鲁</span>
+            梦入 <span class="text-red-600 dark:text-red-400">幻想</span><br>
+            共聚 <span class="text-orange-600 dark:text-orange-400">齐鲁</span>
           </h1>
           <p class="mt-4 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-300">
             山东东方高校联合会由山东省内多所高校的东方众联合成立，致力于促进各高校间的交流与连接，共同推动东方project在山东高校内的发展与传播。
@@ -83,7 +83,7 @@
           <div class="mt-6 flex flex-wrap items-center gap-3 text-xs">
             <a
               href="#event"
-              class="rounded bg-sky-600 dark:bg-sky-500 px-4 py-2 font-medium text-white dark:text-slate-950 shadow shadow-sky-500/20 dark:shadow-sky-500/40 transition hover:bg-sky-700 dark:hover:bg-sky-400"
+              class="rounded bg-red-600 dark:bg-red-500 px-4 py-2 font-medium text-white dark:text-slate-950 shadow shadow-red-500/20 dark:shadow-red-500/40 transition hover:bg-red-700 dark:hover:bg-red-400"
             >
               查看当前活动
             </a>
@@ -103,11 +103,11 @@
             </div>
             <div class="flex items-center gap-1.5">
               <span class="h-1.5 w-1.5 rounded-full bg-fuchsia-500 dark:bg-fuchsia-400" />
-              线下聚会
+              线下例会
             </div>
             <div class="flex items-center gap-1.5">
               <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
-              同人创作
+              发展社群
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@
             }"
           >
             <img 
-              src="/logos/sdtcsa.png" 
+              :src="resolveImage('/logos/sdtcsa.png')" 
               alt="SDTCSA 3D Logo" 
               class="w-full h-full object-contain drop-shadow-2xl"
             />
@@ -130,23 +130,19 @@
 
           <aside class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm p-4 shadow-xl shadow-slate-200/50 dark:shadow-sky-900/40 transition-colors duration-300">
             <h2 class="text-sm font-semibold text-slate-900 dark:text-slate-100">近期活动预告</h2>
-            <p class="mt-1 text-[11px] text-slate-500 dark:text-slate-400">精彩活动不容错过，欢迎大家积极参与。</p>
+            <p class="mt-1 text-[11px] text-slate-500 dark:text-slate-400">2025年12月20日——山东东方高校联合例会01-齐鲁幻聚即将举办。</p>
             <dl class="mt-4 space-y-3 text-xs">
               <div class="flex justify-between">
                 <dt class="text-slate-700 dark:text-slate-300">例会交流</dt>
                 <dd class="text-slate-500 dark:text-slate-400">定期举办线下/线上例会</dd>
               </div>
               <div class="flex justify-between">
-                <dt class="text-slate-700 dark:text-slate-300">同人展参展</dt>
-                <dd class="text-slate-500 dark:text-slate-400">组织参加各地同人展会</dd>
+                <dt class="text-slate-700 dark:text-slate-300">发展社群</dt>
+                <dd class="text-slate-500 dark:text-slate-400">发展山东各地高校社群间的交流</dd>
               </div>
               <div class="flex justify-between">
-                <dt class="text-slate-700 dark:text-slate-300">线上联机</dt>
-                <dd class="text-slate-500 dark:text-slate-400">非想天则/STG/其他游戏</dd>
-              </div>
-              <div class="flex justify-between">
-                <dt class="text-slate-700 dark:text-slate-300">合刊制作</dt>
-                <dd class="text-slate-500 dark:text-slate-400">联合制作社团刊物与周边</dd>
+                <dt class="text-slate-700 dark:text-slate-300">线上交流</dt>
+                <dd class="text-slate-500 dark:text-slate-400">非想天则/STG/其他东方同人</dd>
               </div>
             </dl>
           </aside>
@@ -163,8 +159,8 @@
       <section id="about" class="space-y-4">
         <h2 class="text-xl font-semibold text-slate-900 dark:text-slate-50">关于我们</h2>
         <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-          山东东方高校联合会（SDTCSA）是一个致力于连接山东省内各高校东方Project爱好者的非营利性学生组织。
-          我们旨在搭建一个开放、友好的交流平台，促进各高校社团之间的资源共享与合作。
+          山东东方高校联合会（SDTCU）是一个致力于连接山东省内各高校东方Project爱好者的非营利性学生组织。
+          我们旨在搭建一个开放、友好的交流平台，促进各高校社群之间的资源共享与合作。
         </p>
         <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
           无论你是刚入坑的新人，还是资深的东方众，在这里都能找到志同道合的伙伴。
@@ -174,7 +170,7 @@
 
       <!-- 功能亮点 -->
       <section id="features" class="space-y-5">
-        <h2 class="text-xl font-semibold text-slate-900 dark:text-slate-50">社团活动与特色</h2>
+        <h2 class="text-xl font-semibold text-slate-900 dark:text-slate-50">活动与特色</h2>
         <div class="grid gap-4 md:grid-cols-3">
           <article class="rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-4 text-xs shadow-sm dark:shadow-none transition-colors duration-300">
             <h3 class="font-semibold text-slate-900 dark:text-slate-100">校际联动</h3>
@@ -183,38 +179,108 @@
             </p>
           </article>
           <article class="rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-4 text-xs shadow-sm dark:shadow-none transition-colors duration-300">
-            <h3 class="font-semibold text-slate-900 dark:text-slate-100">创作扶持</h3>
+            <h3 class="font-semibold text-slate-900 dark:text-slate-100">发展社群</h3>
             <p class="mt-2 text-slate-600 dark:text-slate-300">
-              鼓励并支持社员进行同人创作，包括绘画、小说、音乐、游戏制作等，提供展示平台与技术指导。
+              努力发展东方project在高校中的传播，让更多朋友喜欢东方project。
             </p>
           </article>
           <article class="rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-4 text-xs shadow-sm dark:shadow-none transition-colors duration-300">
             <h3 class="font-semibold text-slate-900 dark:text-slate-100">资源共享</h3>
             <p class="mt-2 text-slate-600 dark:text-slate-300">
-              共享活动经验、展会信息、制作教程等资源，帮助各高校社团更好地发展与建设。
+              共享活动经验、展会信息、制作教程等资源，帮助各高校社群更好地发展与建设。
             </p>
           </article>
         </div>
       </section>
 
-      <!-- 页面结构展示 / 导航说明 -->
-      <section id="joinus" class="space-y-4">
-        <h2 class="text-xl font-semibold text-slate-900 dark:text-slate-50">加入我们</h2>
-        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-          <li>· 官方QQ群:977015593</li>
-          <li>· 合作联系:如有活动联办意向，请入群详询。</li>
-        </ul>
-        <p class="text-xs text-slate-500 dark:text-slate-400">
-          欢迎每一位热爱东方Project的同学加入我们的大家庭！
-        </p>
+      <!-- 加入我们 (Refactored) -->
+      <section 
+        id="joinus" 
+        class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-sky-600 via-purple-600 to-pink-600 bg-[length:400%_400%] animate-gradient-flow p-8 md:p-16 text-center text-white shadow-2xl"
+      >
+        <!-- Decorative Circles (CSS only) -->
+        <div class="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-red-500/40 blur-3xl animate-blob mix-blend-overlay"></div>
+        <div class="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-white/20 blur-3xl animate-blob [animation-delay:2000ms] mix-blend-overlay"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-yellow-400/30 blur-3xl animate-blob [animation-delay:4000ms] -z-10"></div>
+
+        <div class="relative z-10 flex flex-col items-center gap-10">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl font-bold tracking-tight md:text-4xl">加入我们</h2>
+            <p class="mt-4 text-lg text-sky-100">
+              无论你是刚入坑的新人，还是资深的东方众，在这里都能找到志同道合的伙伴。
+            </p>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+             <!-- QR Code Card -->
+             <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-pink-500 to-violet-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
+                <div class="relative h-48 w-48 bg-white rounded-xl flex items-center justify-center p-2">
+                   <img :src="resolveImage('/logos/qqgroup.webp')" alt="QQ Group QR" class="w-full h-full object-contain" />
+                </div>
+             </div>
+
+             <!-- Info Card -->
+             <div class="text-left space-y-4">
+                <div class="flex items-center gap-4 p-2 rounded-xl transition-colors hover:bg-white/10 cursor-default">
+                   <div class="p-3 rounded-lg bg-white/10 backdrop-blur-sm shadow-inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                   </div>
+                   <div>
+                      <p class="text-sm text-sky-200 font-medium">官方QQ群</p>
+                      <p class="text-2xl font-bold font-mono tracking-wider select-all drop-shadow-sm">977015593</p>
+                   </div>
+                </div>
+                
+                <div class="flex items-center gap-4 p-2 rounded-xl transition-colors hover:bg-white/10 cursor-default">
+                   <div class="p-3 rounded-lg bg-white/10 backdrop-blur-sm shadow-inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                   </div>
+                   <div>
+                      <p class="text-sm text-sky-200 font-medium">合作联系</p>
+                      <p class="text-base drop-shadow-sm">如有活动联办意向，请入群详询</p>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <!-- 页脚 -->
     <footer class="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/90 transition-colors duration-300">
-      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-4 text-[11px] text-slate-500 md:flex-row">
-        <p>© {{ new Date().getFullYear() }} 山东东方高校联合会</p>
-        <p class="text-slate-500">基于 Vue 3 · TypeScript · TailwindCSS · Vite 构建</p>
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 md:flex-row">
+        <div class="flex flex-col items-center gap-2 md:items-start">
+          <p class="text-xs text-slate-500">© {{ new Date().getFullYear() }} 山东东方高校联合会</p>
+          <p class="text-[10px] text-slate-400">基于 Vue 3 · TypeScript · TailwindCSS · Vite 构建</p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex items-center gap-4">
+          <a 
+            href="https://qm.qq.com/q/FORqQUAg6I" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group relative flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 transition-all hover:bg-[#12B7F5] hover:text-white hover:-translate-y-1"
+            title="加入官方QQ群"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M824.8 613.2c-16-51.4-34.4-94.6-62.7-165.3C766.5 262.2 689.3 112 511.5 112 331.7 112 256.2 265.2 261 447.9c-28.4 70.8-46.7 113.7-62.7 165.3-34 109.5-23 154.8-14.6 155.8 18 2.2 70.1-82.4 70.1-82.4 0 49 25.2 112.9 79.8 159-26.4 8.1-85.7 29.9-71.6 53.8 11.4 19.3 196.2 12.3 249.5 6.3 53.3 6 238.1 13 249.5-6.3 14.1-23.8-45.3-45.7-71.6-53.8 54.6-46.2 79.8-110.1 79.8-159 0 0 52.1 84.6 70.1 82.4 8.5-1.1 19.5-46.4-14.5-155.8z" /></svg>
+          </a>
+          
+          <a 
+            href="https://github.com/SDTCU/SDTCU.github.io" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group relative flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 transition-all hover:bg-black hover:text-white hover:-translate-y-1"
+            title="访问GitHub仓库"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405 1.02 0 2.04.135 3 .405 2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
       </div>
     </footer>
   </div>
@@ -225,7 +291,9 @@ import { ref, onMounted, onUnmounted, computed } from 'vue';
 import UniversityCommunity from './components/UniversityCommunity.vue';
 import SeasonalEffects from './components/SeasonalEffects.vue';
 import UnderConstruction from './components/UnderConstruction.vue';
+
 import TouhouEvents from './components/TouhouEvents.vue';
+import { resolveImage } from './utils/image';
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id)
@@ -236,7 +304,7 @@ const scrollTo = (id: string) => {
 // Season Effect Logic
 const isSeasonEffectActive = ref(true);
 const seasonalEffectsRef = ref<InstanceType<typeof SeasonalEffects> | null>(null);
-const showUnderConstruction = ref(true);
+const showUnderConstruction = ref(false);//施工中弹窗，true为开
 
 const currentSeason = computed(() => {
     return seasonalEffectsRef.value?.currentSeason || 'spring';

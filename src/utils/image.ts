@@ -1,7 +1,7 @@
 // 图片加载优化工具
 // 使用 jsDelivr CDN 加速 GitHub Pages 上的静态资源
 
-const CDN_PREFIX = 'https://cdn.jsdelivr.net/gh/SDTCSA/SDTCSA.github.io@gh-pages';
+const CDN_PREFIX = 'https://cdn.jsdelivr.net/gh/SDTCU/SDTCU.github.io@gh-pages';
 
 /**
  * 解析图片路径
@@ -15,13 +15,18 @@ export const resolveImage = (path: string): string => {
     return path;
   }
 
+  // 尝试使用 WebP (简单地替换扩展名)
+  // 注意：这需要确保对应的 WebP 文件确实存在
+  // 我们将在构建脚本中生成这些 WebP 文件
+  const webpPath = path.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+
   // 开发环境使用本地文件
   if (import.meta.env.DEV) {
-    return path;
+    return webpPath;
   }
 
   // 生产环境使用 CDN
   // 移除开头的 / 以避免双重斜杠
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  const cleanPath = webpPath.startsWith('/') ? webpPath.slice(1) : webpPath;
   return `${CDN_PREFIX}/${cleanPath}`;
 };

@@ -1,2 +1,0 @@
-Old: <h1 class="mt-4 text-4xl font-semibold leading-tight tracking-tight text-slate-900 dark:text-slate-50 md:text-4xl">
-New: <h1 class="mt-4 text-5xl font-semibold leading-tight tracking-tight text-slate-900 dark:text-slate-50 md:text-6xl">
