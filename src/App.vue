@@ -13,10 +13,10 @@
         </div>
 
         <nav class="hidden gap-6 text-sm text-slate-600 dark:text-slate-300 md:flex items-center">
-          <button class="hover:text-sky-600 dark:hover:text-white transition-colors" @click="scrollTo('hero')">主页</button>
-          <button class="hover:text-sky-600 dark:hover:text-white transition-colors" @click="scrollTo('event')">活动一栏</button>
-          <button class="hover:text-sky-600 dark:hover:text-white transition-colors" @click="scrollTo('college')">高校社群</button>
-          <button class="hover:text-sky-600 dark:hover:text-white transition-colors" @click="scrollTo('joinus')">加入我们</button>
+          <button class="hover:text-sky-600 dark:hover:text-white transition-colors c-nav-header" @click="scrollTo('hero')">主页</button>
+          <button class="hover:text-sky-600 dark:hover:text-white transition-colors c-nav-header" @click="scrollTo('event')">活动</button>
+          <button class="hover:text-sky-600 dark:hover:text-white transition-colors c-nav-header" @click="scrollTo('college')">高校一览</button>
+          <button class="hover:text-sky-600 dark:hover:text-white transition-colors c-nav-header" @click="scrollTo('joinus')">加入我们</button>
           
           <!-- Season Effect Toggle -->
           <button 
